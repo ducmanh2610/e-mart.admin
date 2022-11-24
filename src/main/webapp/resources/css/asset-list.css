@@ -1,0 +1,25 @@
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.main {
+	padding: 0 10px;
+}
+
+.p-image {
+	width: 20%;
+}
+
+.action {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+}

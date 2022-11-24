@@ -1,0 +1,28 @@
+.image-preview {
+    display: flex;
+}
+
+.image-box {
+    width: 10%;
+    position: relative;
+}
+
+.loading {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    border-radius: 0;
+    opacity: 90%;
+}
+
+#imagesDiv {
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    padding: 10px 0;
+}
+
+.imgs {
+    width: 20%;
+    padding: 5px;
+}

@@ -1,0 +1,29 @@
+.wrapper {
+	display: flex;
+	justify-content: center;
+	background: url("../images/asset-bg.jpg");
+	background-size: cover;
+}
+
+.login {
+	
+display: flex;
+	
+flex-direction: column;
+	
+width: 40%;
+	
+padding: 3em;
+	
+background: #0000008a;
+	
+height: auto;
+	
+color: white;
+	
+line-height: 2.5;
+}
+
+.login h1 {
+	text-align: center;
+}
