@@ -50,6 +50,7 @@
 							<i class="bi bi-shield-lock-fill"></i>Register
 						</button></a>
 				</div>
+				<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
 			</f:form>
 		</div>
 	</div>

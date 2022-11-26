@@ -245,7 +245,9 @@ public class User implements UserDetails{
 		Collection<UserRoles> roles = new UserRolesDAOImpl().getRolesList();
 		
 		for (UserRoles role : roles) {	
-			authorities.add(new SimpleGrantedAuthority(role.getName()));
+			if(this.getRoles().getName().equals(role.getName())) {
+				authorities.add(new SimpleGrantedAuthority(role.getName()));
+			}
 		}
 		
 		return authorities;

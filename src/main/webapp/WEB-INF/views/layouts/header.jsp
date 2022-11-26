@@ -52,13 +52,18 @@
 						<button class="btn btn-secondary dropdown-toggle" type="button"
 							data-bs-toggle="dropdown" aria-expanded="false">
 							<span><i class="bi bi-person-circle"></i></span> <span>Welcome</span>
-							<b>${username}</b>
+							<b>${pageContext.request.userPrincipal.name}</b>
 						</button>
 						<ul class="dropdown-menu">
 							<li><a class="dropdown-item" href="#">User Profile</a></li>
 							<li><a class="dropdown-item" href="#">Edit Profile</a></li>
-							<li><a class="dropdown-item"
-								href="${pageContext.request.contextPath}/logout">Logout </a></li>
+							<li>
+								<form action="<c:url value="/j_spring_security_logout" />"
+									method="post">
+									<input type="hidden" name="${_csrf.parameterName}"
+										value="${_csrf.token}" /> <input type="submit" value="Logout" />
+								</form>
+							</li>
 						</ul>
 					</div>
 				</div>

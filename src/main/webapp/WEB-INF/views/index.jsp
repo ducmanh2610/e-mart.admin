@@ -23,6 +23,7 @@
 		</div>
 		<div class="main">
 			<p>Dashboard</p>
+			<h3>Welcome</h3><b>${username}: ${roles}</b>
 		</div>
 	</div>
 	<jsp:include page="layouts/footer.jsp" />

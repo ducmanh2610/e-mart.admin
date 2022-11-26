@@ -28,6 +28,11 @@ public class AuthController {
 	public AuthController() {
 		userDAO = new UserDAOImpl();
 	}
+	
+	@RequestMapping(value = "/", method = RequestMethod.GET)
+	public String redirect(HttpServletRequest request, HttpServletResponse response) {
+		return "index";
+	}
 
 	@RequestMapping(value = "/login", method = RequestMethod.GET)
 	public String login(Model m, HttpServletRequest request, HttpServletResponse response) {
@@ -54,10 +59,10 @@ public class AuthController {
 
 		if (!bindingResult.hasErrors()) {
 			UserDetails userDetails = userDAO.loadUserByUsername(user.getUsername());
+			
 			m.addAttribute("username", userDetails.getUsername());
 			m.addAttribute("roles", userDetails.getAuthorities());
-
-			response.sendRedirect(request.getContextPath() + "/");
+			
 			return "index";
 		} else {
 			m.addAttribute("msgError", "Login Failed");
